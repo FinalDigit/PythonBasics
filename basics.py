@@ -12,5 +12,15 @@ print(var1)
 stringCombo = (var + ' ' + var1)
 print(stringCombo)
 
-# Another Way To Combine Strings
+# Open JSON file as object with read() method
+with open('auth.json') as config_file:
+  data = json.load(config_file) 
+  username = data['value1']
+  password = data['value2']
 
+# Open JSON file as string
+with open('auth.json') as config_file:
+  data = json.loads(config_file.read())
+  username = data['value1']
+  password = data['value2']
+    
